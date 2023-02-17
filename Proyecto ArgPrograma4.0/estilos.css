@@ -1,0 +1,305 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #ddd;
+}
+
+#presentacion{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.main_presentacion-namephoto{
+    background: linear-gradient(to right, #003, #006, #11a, #006, #003);
+    font-family: sans-serif;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    color: #d1d100;
+    font-weight: bold;
+}
+
+.presntacion_namephoto-img{
+    border-radius: 50%;
+    border: 5px  solid #d1d100;
+}
+
+.presentacion-presentacion
+, #main_experiencia-laboral
+, #main_datos-personales
+, #main_habilidades
+, #main_formacion-academica
+, #main_cursos-realizados{
+    width: 90%;
+    box-shadow: -3px 0 5px 3px #99f;
+    margin: 20px auto 20px auto;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #fff;
+}
+
+.presentacion-presentacion p
+, .main_experiencia-laboral_div
+, #main_datos-personales ul li
+, #main_habilidades div
+, #main_formacion-academica div
+, #main_cursos-realizados p{
+    width: 90%;
+    border-left: 3px solid #11a;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    padding-left: 4px;
+    margin-bottom: 15px;
+}
+
+h2{
+    color: #11c;
+    padding-left: 6px;
+    margin-bottom: 10px;
+}
+
+h2 i{
+    margin-right: 5px;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.main_experiencia-laboral_div p:first-of-type{
+    font-weight: bold;
+}
+
+.main_experiencia-laboral_div p:nth-child(2){
+    color: #555;
+    font-weight: bold;
+}
+
+ul{
+    list-style: none;
+} 
+
+#main_habilidades div ul li
+, #main_formacion-academica div p:not(.bold)
+, #main_datos-personales ul li span:not(.bold){
+    color: #666
+}
+
+footer{
+    background: linear-gradient(to right, #003, #006, #11a, #006, #003);
+    font-weight: bold;
+    color: #888;
+    padding: 20px;
+}
+
+.icono{
+    padding: 0 4px 0 4px;
+}
+
+.redes{
+    position: fixed;
+    top: 20%;
+    right: 0;
+    z-index: 500;
+    background-color: #66b;
+}
+
+.redes ul li{
+    display: flex;
+    flex-direction: row-reverse;
+    width: 40px;
+    height: 25%;
+}
+
+.redes ul li i{
+    font-size: 30px;
+    font-weight: 900;
+
+    width: 100%;
+    padding: 5px;
+}
+
+.redes ul li i:hover{
+    background-color: #d1d100;
+}
+
+.redes ul li i:active{
+    background-color: #ddd;
+}
+
+
+
+.redes_ul_li_Instagram, .redes_ul_li_Mail, .redes_ul_li_Facebook, .redes_ul_li_Pinterest{
+    font-size: 22px;
+    margin: auto 0;
+    opacity: 0;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    transition: height, opacity  3s;
+}
+
+
+
+.redesEventListener {/* clase a añadir con el metodo classList.toggle() */
+    opacity: 1;
+    width: auto;
+    height: 100%;
+    visibility: visible;
+    background-color: #dddb;
+    color: #004;
+    transition: height, opacity  3s;
+}
+
+
+/* Mediaquery para tablets*/
+
+
+@media screen and (min-width: 768px) and (max-width: 1023px){
+
+    section:not(#main_presentacion), .presentacion-presentacion{
+        background-color: #fff5;
+    }
+
+    #main_habilidades{
+        display: grid;
+        grid-template-areas: 
+                             "titulo titulo titulo titulo"
+                             "soSkills soSkills haSkills haSkills"
+                             "soSkills soSkills haSkills haSkills";
+        row-gap: 10px;
+        column-gap: 5px;
+    }
+
+    #main_habilidades h2{
+        grid-area: titulo;
+    }
+
+    .softSkills{
+        grid-area: soSkills;
+    }
+
+    .hardSkills{
+        grid-area: haSkills;
+    }
+
+
+}
+
+
+/*mediaqueries para notebook y pc*/
+
+@media screen and (min-width: 1024px){
+
+    *{
+        font-size: 20px;
+    }
+    
+    body{
+        background-color: #000;
+    }
+
+    h1{
+        font-size: 2rem;
+    }
+
+    h2{
+        font-size: 1.5rem;
+        border-bottom: #000 double 10px;
+        margin-bottom: 20px;
+    }
+
+    h2 i{
+        margin-right: 5px;
+    }
+
+    h3{
+        font-size: 1.2rem;
+        color: #007;
+    }
+
+    .bold{
+        color: #007;
+    }
+
+    #main_habilidades{
+        display: grid;
+        grid-template-areas:
+                            "titulo titulo titulo titulo"
+                            "soSkills soSkills haSkills haSkills"
+                            "soSkills soSkills haSkills haSkills";
+        row-gap: 10px;
+        column-gap: 5px;
+    }
+
+    #main_habilidades h2{
+        grid-area: titulo;
+    }
+
+    .softSkills{
+        grid-area: soSkills;
+    }
+
+    .hardSkills{
+        grid-area: haSkills;
+    }
+
+    .presentacion-presentacion
+    , #main_experiencia-laboral
+    , #main_datos-personales
+    , #main_habilidades
+    , #main_formacion-academica
+    , #main_cursos-realizados{
+        box-shadow: none;
+    }
+
+    .presentacion-presentacion p
+    , .main_experiencia-laboral_div
+    , #main_datos-personales ul li
+    , #main_habilidades div
+    , #main_formacion-academica div
+    , #main_cursos-realizados p{
+        width: 90%;
+        border-left: 3px solid #d1d100;
+        color: #777;
+        font-weight: bold;
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+        padding-left: 4px;
+        margin-bottom: 15px;
+    }
+
+    #main_presentacion{
+        background: linear-gradient(to right, #003, #006, #11a, #006, #003);
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .main_presentacion-namephoto{
+        background: none;
+        width: 40%;
+        margin: 0;
+    }
+
+    .presentacion_namephoto-img{
+        width: 40%;
+    }
+
+    .presentacion-presentacion{
+        background: none;
+        width: 60%;
+        margin: 0;
+    }
+
+    .presentacion-presentacion h2{
+        border: none;
+        color: #d1d100;
+    }
+
+}
